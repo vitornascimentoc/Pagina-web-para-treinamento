@@ -1,0 +1,77 @@
+<!-- Aprendendo a montar tabela -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    td, th {
+        border: 2px solid gray;
+        padding: 6px;
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    caption {
+        text-align: left;
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .bold {
+        color: black;
+    }
+
+    tfoot {
+        background-color: rgba(216, 2, 2, 0.5);
+        font-style: italic;
+    }
+
+    .responsive-table {
+        width: 100%;
+        overflow: auto;
+    }
+</style>
+<body>
+    <p>"Você já imaginou como seria ter mais tempo para 
+        cuidar do crescimento do seu negócio, 
+        enquanto a tecnologia cuida das tarefas 
+        repetitivas?"</p>
+    <div class="responsive-table">
+        <table>
+            <caption class="bold">Campeões em 2025</caption>
+            <thead>
+                <tr>
+                    <th>Titulo Libertadores</th>
+                    <th>Titulo Copa do Brasil</th>
+                    <th>Titulo Brasileirão</th>
+                </tr>
+            </thead>
+
+        <tbody>
+            <tr>
+                <td colspan="3">Flamengo</td>
+            </tr>
+        </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>Total:<br>3 títulos</td>
+                </tr>
+                <tr>
+                    
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

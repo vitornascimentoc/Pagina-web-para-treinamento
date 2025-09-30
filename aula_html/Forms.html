@@ -1,0 +1,51 @@
+<!-- Formulários e input -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" target="_blank">
+        <h1>Cabeça do formulário</h1>
+        <p>O formulário</p>
+        <p>
+            <label for="form">Profissão:</label>
+            <input type="text" id="form" name="profissão" 
+            placeholder="Sua profissão" required>
+        </p>
+        <p>
+            Classe:<br>
+            <label for="Junior">Você é um dev Júnior</label>
+            <input type="radio" value="Junior" id="Junior" name="Classe"><br>
+            <label for="Pleno">Você é um dev Pleno</label>
+            <input type="radio" value="Pleno" id="Pleno" name="Classe"><br>
+            <label for="Sênior">Você é um dev Sênior</label>
+            <input type="radio" value="Sênior" id="Sênior" name="Classe"><br>
+        </p>
+        <p>
+            Gênero:<br>    
+            <label for="homem">Você é homem</label>
+            <input type="radio" value="homem" id="homem" name="genero"><br>
+            <label for="mulher">Você é um dev mulher</label>
+            <input type="radio" value="mulher" id="mulher" name="genero"><br>
+            <label for="indio">Você é um dev indio</label>
+            <input type="radio" value="indio" id="indio" name="genero"><br>
+            <label for="problemático">Você é um dev problemático</label>
+            <input type="radio" value="problemático" id="problemático " name="genero">
+
+        </p>
+        <p>
+            <button type="reset">Reset</button>
+            <button type="submit">Salvar</button>
+        </p>
+    </form>
+</body>
+</html>
