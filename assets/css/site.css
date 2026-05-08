@@ -1,0 +1,108 @@
+
+.elms-sans- {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+:root {
+  --corBase: rgb(178, 194, 223);
+  --corMenu: rgb(43, 69, 214);
+}
+
+/* Border-box serve para afastar o conteúdo da borda do elemento.
+    Visto que sem ele o padding é somado à width e height aumentando o tamanho do elemento e seu conteúdo fica na borda.
+ */
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--corBase);
+}
+
+/* Tamanho do container */
+.container {
+  height: 700px;
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 1px;
+}
+
+/* Estilo do container */
+.container {
+  background-color: var(--corMenu);
+  color: white;
+  border-radius: 10px;
+}
+
+form, form input, form label {
+  display: block;
+  width: 30em;
+  margin: 10px auto;
+  border: 0;
+  border-radius: 5px;
+}
+
+.paragraf {
+  width: 30em;
+  height: 12em;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.paragraf {
+  background-color: white;
+  color: black;
+}
+
+
+form input:focus {
+  outline: 2px solid rgb(9, 1, 46);
+}
+
+#nome-usuario, #numero-usuario, #time-do-coracao, #dataNascimento, #genero-usuario {
+  padding: 5px;
+}
+
+.comanda {
+  display: flex;
+  justify-content: center;
+}
+
+/* configurando botao */
+.botao {
+  width: 30em;
+  height: 2.5em;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Estilo do botão */
+.botao {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--corBase);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Caracteristicas ao selecionar o botão */
+.botao:hover {
+  background-color: rgb(131, 160, 255);
+}
+
+.botao:active {
+  background-color: rgb(62, 86, 165);
+}
