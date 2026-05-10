@@ -7,8 +7,8 @@
 }
 
 :root {
-  --corBase: rgb(178, 194, 223);
-  --corMenu: rgb(43, 69, 214);
+  --corBase: rgb(232, 238, 248);
+  --corMenu: rgba(43, 69, 214, 0.863);
 }
 
 /* Border-box serve para afastar o conteúdo da borda do elemento.
@@ -104,5 +104,24 @@ form input:focus {
 }
 
 .botao:active {
+  background-color: rgb(62, 86, 165);
+}
+
+.reset {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.reset {
+  border: 1px solid var(--corBase);
+  border-radius: 5px;
+}
+
+.reset:hover {
+  background-color: rgb(131, 160, 255);
+}
+
+.reset:active {
   background-color: rgb(62, 86, 165);
 }

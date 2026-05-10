@@ -15,16 +15,16 @@
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum sapiente perspiciatis unde suscipit omnis libero facilis ipsam dolorum quis repellat et, nemo ipsa debitis, itaque quia facere nam culpa harum.
     </p>
 
-    <form class="forms">
+    <form class="forms" action="" method="get" autocomplete="off">
 
       <label for="nome-usuario">Seu nome completo:</label>
       <input id="nome-usuario" type="text">
 
-      <label for="time-do-coracao">Seu time do coração:</label>
-      <input id="time-do-coracao" type="text">
+      <!-- <label for="time-do-coracao">Seu time do coração:</label>
+      <input id="time-do-coracao" type="text"> -->
       
       <label for="dataNascimento">Sua data de nascimento:</label>
-      <input id="dataNascimento" type="date">
+      <input id="dataNascimento" type="datetime">
       
       <label for="genero-usuario">Seu gênero:</label>
       <input id="genero-usuario" type="text">
@@ -32,11 +32,16 @@
       <label for="numero-usuario">Escolha um número:</label>
       <input id="numero-usuario" type="number">
       
+      <div class="comanda">
+        <button class="botao" type="submit">Responder</button>
+      </div>
+      
+      <div class="comanda">
+        <button class="reset" type="submit">resetar</button>
+      </div>
+
     </form>
     
-    <div class="comanda">
-      <button class="botao" type="submit">Responder</button>
-    </div>
   </section>
   
 </body>
