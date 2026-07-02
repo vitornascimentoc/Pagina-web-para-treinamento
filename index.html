@@ -8,41 +8,37 @@
   <script src="./assets/js/index.js" defer></script>
 </head>
 <body>
-  <section class="container">
-    <h1>Formulário para Pesquisa</h1>
-    
-    <p class="paragraf">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum sapiente perspiciatis unde suscipit omnis libero facilis ipsam dolorum quis repellat et, nemo ipsa debitis, itaque quia facere nam culpa harum.
-    </p>
-
+  <main class="all">
+    <h1>Lista de Tarefas</h1>
     <form class="forms" action="" method="get" autocomplete="off">
+      <input id="tarefas-usuario" type="text" placeholder="Crie uma tarefa">
 
-      <label for="nome-usuario">Seu nome completo:</label>
-      <input id="nome-usuario" type="text">
-
-      <!-- <label for="time-do-coracao">Seu time do coração:</label>
-      <input id="time-do-coracao" type="text"> -->
-      
-      <label for="dataNascimento">Sua data de nascimento:</label>
-      <input id="dataNascimento" type="datetime">
-      
-      <label for="genero-usuario">Seu gênero:</label>
-      <input id="genero-usuario" type="text">
-      
-      <label for="numero-usuario">Escolha um número:</label>
-      <input id="numero-usuario" type="number">
-      
-      <div class="comanda">
-        <button class="botao" type="submit">Responder</button>
+      <div class="comand">
+        <button class="botao" type="button">Criar</button>
       </div>
       
-      <div class="comanda">
+      <!-- <div class="comanda">
         <button class="reset" type="submit">resetar</button>
-      </div>
-
+      </div> -->
     </form>
-    
+  <section class="board-tasks">
+    <div class="taskPen">
+      <h2 class="h2Pen">Tarefas Pendentes</h2>
+    </div>
+
+    <div class="taskExe">
+      <h2 class="h2Exe">Tarefas em Andamento</h2>
+    </div>
+
+    <div class="concTask">
+      <h2 class="h2Conc">Tarefas Concluídas</h2>
+    </div>
+
+    <div class="taskInc">
+      <h2 class="h2Inc">Tarefas Incompletas</h2>
+    </div>
   </section>
-  
+  <!-- <footer class="rodape"></footer> -->
+  </main>
 </body>
 </html>

@@ -20,9 +20,9 @@
   outline: 0;
 }
 
-h1 {
-  color: white;
-  text-align: center;
+/* tag Main */
+.all {
+  background-color: black ;
 }
 
 body {
@@ -31,60 +31,44 @@ body {
   background-color: var(--corBase);
 }
 
-/* Tamanho do container */
-.container {
-  height: 700px;
-  max-width: 700px;
-  margin: 10px auto;
-  padding: 1px;
-}
 
-/* Estilo do container */
-.container {
-  background-color: var(--corMenu);
+h1 {
   color: white;
-  border-radius: 10px;
+  text-align: center;
 }
 
-form, form input, form label {
+form, form input {
   display: block;
   width: 30em;
   margin: 10px auto;
   border: 0;
-  border-radius: 5px;
 }
-
-.paragraf {
-  width: 30em;
-  height: 12em;
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.paragraf {
-  background-color: white;
-  color: black;
-}
-
 
 form input:focus {
   outline: 2px solid rgb(9, 1, 46);
 }
 
-#nome-usuario, #numero-usuario, #time-do-coracao, #dataNascimento, #genero-usuario {
+/* input  */
+#tarefas-usuario {
   padding: 5px;
+  width: 250px;
+  min-height: 30px;
 }
 
-.comanda {
+#tarefas-usuario {
+  box-shadow: 2px;
+}
+
+/* div do botão de criar task */
+.comand {
   display: flex;
   justify-content: center;
 }
 
-/* configurando botao */
+/* configurando botao de criar task */
 .botao {
-  width: 30em;
-  height: 2.5em;
+  width: 150px;
+  height: 1.5em;
   font-size: 18px;
   font-weight: 500;
   margin-top: 20px;
@@ -98,30 +82,106 @@ form input:focus {
   cursor: pointer;
 }
 
-/* Caracteristicas ao selecionar o botão */
+/* Caracteristicas ao interagir o botão */
 .botao:hover {
   background-color: rgb(131, 160, 255);
 }
 
+/* Caracteristicas ao apertar o botão */
 .botao:active {
   background-color: rgb(62, 86, 165);
 }
 
+/* configurando o botão para limpar o input */
 .reset {
   font-size: 18px;
   font-weight: 500;
   margin-top: 10px;
 }
 
+/* estilo do botão de limpar o input */
 .reset {
   border: 1px solid var(--corBase);
   border-radius: 5px;
 }
 
+/* Caracteristicas ao interagir o botão */
 .reset:hover {
   background-color: rgb(131, 160, 255);
 }
 
+/* Caracteristicas ao apertar o botão */
 .reset:active {
   background-color: rgb(62, 86, 165);
+}
+
+/* Tamanho da section */
+.board-tasks {
+  display: flex;
+  gap: 5px;
+  height: 100%;
+  /* max-width: 700px; */
+  margin: 10px auto;
+  padding: 1px;
+}
+
+/* Estilo da section */
+.board-tasks {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+/* div´s de estado das tasks */
+.taskPen, .taskExe, .concTask, .taskInc {
+  width: 30em;
+  min-height: 400px;
+  max-height: 100%;
+  margin: 10px 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.h2Pen {
+  color: yellow;
+}
+
+.h2Exe {
+  color: green;
+}
+
+.h2Conc {
+  color: blue;
+}
+
+.h2Inc {
+  color: red;
+}
+
+/* Estilo das div´s */
+.taskPen, .taskExe, .concTask, .taskInc {
+  background-color: rgba(98, 126, 253, 0.507);
+}
+
+.taskAddUser{
+  min-height: 25px;
+  max-height: 100%;
+  margin: 5px;
+  padding: 2px;
+}
+
+.taskAddUser { 
+  background-color: white;
+  color: black;
+}
+
+.textTask {
+  margin: 0px auto;
+}
+
+
+.DelTask {
+  color: red;
+  font-size: 15px;
+  background-color: white;
 }
