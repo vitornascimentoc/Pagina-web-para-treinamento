@@ -1,0 +1,263 @@
+.elms-sans- {
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+  :root {
+    --corBase: rgb(232, 238, 248);
+    --corMenu: rgba(43, 69, 214, 0.863);
+  
+    --bg-dark: #050611;
+    --card: rgba(110, 136, 255, 0.18);
+    --card-strong: rgba(110, 136, 255, 0.32);
+  
+    --stroke: rgba(255, 255, 255, 0.18);
+    --stroke-2: rgba(0, 0, 0, 0.25);
+  
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.16);
+  
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-sm: 10px;
+  }
+  
+  /* Box sizing */
+  * {
+    box-sizing: border-box;
+    outline: 0;
+  }
+  
+  /* Main */
+  .all {
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(67, 100, 255, 0.35), transparent 50%),
+                radial-gradient(900px 500px at 90% 10%, rgba(0, 229, 255, 0.18), transparent 55%),
+                var(--bg-dark);
+  }
+  
+  /* Body */
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(232, 238, 248, 0.9), rgba(232, 238, 248, 0.55));
+    min-height: 100vh;
+  }
+  
+  /* Título */
+  h1 {
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.4px;
+    text-shadow: 0 8px 28px rgba(0,0,0,0.45);
+    margin: 18px 0 6px;
+  }
+  
+  /* Forms */
+  form, form input {
+    display: block;
+    width: 30em;
+    margin: 10px auto;
+    border: 0;
+  }
+  
+  form input:focus {
+    outline: 2px solid rgba(9, 1, 46, 0.65);
+    box-shadow: 0 0 0 6px rgba(43, 69, 214, 0.18);
+  }
+  
+  /* Input */
+  #tarefas-usuario {
+    padding: 10px 12px;
+    width: 260px;
+    min-height: 40px;
+  
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.95);
+    color: #0b1022;
+  
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* Botão criar task */
+  .comand {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .botao {
+    width: 160px;
+    height: 42px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 16px;
+  
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255,255,255,0.18);
+    cursor: pointer;
+  
+    color: white;
+    background: linear-gradient(135deg, rgba(43, 69, 214, 0.95), rgba(90, 120, 255, 0.9));
+    box-shadow: 0 10px 22px rgba(43, 69, 214, 0.28);
+    transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+  }
+  
+  .botao:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(43, 69, 214, 0.38);
+  }
+  
+  .botao:active {
+    transform: translateY(0px);
+    filter: brightness(0.98);
+  }
+  
+  /* Reset */
+  .reset {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+    height: 42px;
+    padding: 0 14px;
+  
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+  
+    color: #0b1022;
+    box-shadow: var(--shadow-soft);
+    transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  }
+  
+  .reset:hover {
+    background: rgba(131, 160, 255, 0.95);
+    box-shadow: 0 14px 30px rgba(43, 69, 214, 0.18);
+    transform: translateY(-1px);
+  }
+  
+  .reset:active {
+    transform: translateY(0px);
+  }
+  
+  /* Board */
+  .board-tasks {
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    margin: 16px auto;
+    padding: 14px;
+  
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  
+    backdrop-filter: blur(8px);
+  }
+  
+  /* Cards das colunas */
+  .taskPen, .taskExe, .concTask, .taskInc {
+    width: 30em;
+    min-height: 430px;
+    max-height: 100%;
+    margin: 0;
+    padding: 12px;
+  
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--stroke);
+    background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.05));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), var(--shadow-soft);
+  
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* “brilho” sutil */
+  .taskPen::after, .taskExe::after, .concTask::after, .taskInc::after {
+    content: "";
+    position: absolute;
+    inset: -40% -20% auto -20%;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.20), transparent 60%);
+    transform: rotate(8deg);
+    pointer-events: none;
+  }
+  
+  /* Títulos coloridos */
+  .h2Pen { color: #ffd84a; }
+  .h2Exe { color: #2ee59d; }
+  .h2Conc { color: #4da3ff; }
+  .h2Inc { color: #ff4d6d; }
+  
+  /* Itens dentro do card */
+  .taskPen, .taskExe, .concTask, .taskInc {
+    /* override: reforça a cor */
+    background-color: transparent;
+  }
+  
+  .taskAddUser {
+    min-height: 28px;
+    max-height: 100%;
+    margin: 10px 0;
+    padding: 10px 10px;
+  
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0,0,0,0.08);
+  
+    background: rgba(255, 255, 255, 0.92);
+    color: #0b1022;
+  
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  /* Texto */
+  .textTask {
+    margin: 0;
+    font-weight: 600;
+    color: #0b1022;
+  }
+  
+  /* Botão/label de deletar */
+  .DelTask {
+    color: #d81b60;
+    font-size: 14px;
+    font-weight: 800;
+    background: rgba(216, 27, 96, 0.08);
+    border: 1px solid rgba(216, 27, 96, 0.25);
+  
+    padding: 6px 10px;
+    border-radius: 999px;
+  
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  }
+  
+  .DelTask:hover {
+    background: rgba(216, 27, 96, 0.14);
+    box-shadow: 0 10px 24px rgba(216, 27, 96, 0.18);
+    transform: translateY(-1px);
+  }
+  
+  .DelTask:active {
+    transform: translateY(0px);
+  }
+  
+  /* Responsivo simples (opcional, melhora UI) */
+  @media (max-width: 1200px) {
+    .board-tasks {
+      flex-wrap: wrap;
+    }
+    .taskPen, .taskExe, .concTask, .taskInc {
+      width: min(90vw, 30em);
+    }
+  }
